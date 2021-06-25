@@ -1,0 +1,13 @@
+;write an  8051 assembly level program to add 'N' bytes of data taking into account
+; the possible carry output
+; display outbut in register b
+org 0000h
+mov r0,#30h
+mov r2,#03h
+mov r3, #10h
+back: addc a,@r0
+inc r0
+djnz r2, back
+mov b, r3
+div ab
+end
